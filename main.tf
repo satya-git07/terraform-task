@@ -1,8 +1,7 @@
 provider "google" {
-  project = "satyanarayana"  # Your GCP project ID
-  region  = "us-central1"  # Your preferred GCP region
-  zone    = "us-central1-a"  # Your preferred GCP zone
-  credentials = file("gcp.json")
+  project = "satyanarayana"  
+  region  = "us-central1"  
+  zone    = "us-central1-a"  
 }
 
 resource "google_compute_instance_template" "default" {
