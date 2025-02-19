@@ -2,7 +2,6 @@ pipeline {
     agent any
     environment {
         GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-sa')
-        
     }
     stages {
         stage('Checkout Code') {
@@ -23,3 +22,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            cleanWs() // Clean up the workspace after each build
+        }
+    }
+}
